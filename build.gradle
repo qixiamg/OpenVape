@@ -1,0 +1,107 @@
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
+    id "net.minecraftforge.gradle.forge"
+    id "org.spongepowered.mixin"
+}
+
+group = 'rip.vape'
+version = '1.0-SNAPSHOT'
+
+compileJava.options.encoding = "UTF-8"
+
+configurations {
+    include
+    implementation.extendsFrom(include)
+}
+
+repositories {
+    maven { url = "https://repo.lunarcn.top/repository/maven-public/" }
+    maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
+    maven { url = "https://jitpack.io/" }
+    mavenCentral()
+}
+
+dependencies {
+    include("org.spongepowered:mixin:0.7.11-SNAPSHOT") {
+        transitive = false
+        exclude module: "guava"
+        exclude module: "commons-io"
+        exclude module: "gson"
+        exclude module: "launchwrapper"
+        exclude module: "log4j-core"
+        exclude module: "slf4j-api"
+    }
+
+    annotationProcessor("org.spongepowered:mixin:0.7.11-SNAPSHOT")
+
+    implementation 'javassist:javassist:3.12.1.GA'
+
+    implementation 'org.jetbrains:annotations:24.0.1'
+}
+
+shadowJar {
+    archiveClassifier.set("fatjar")
+    configurations = [project.configurations.include]
+    duplicatesStrategy DuplicatesStrategy.EXCLUDE
+
+    exclude "native-binaries/**"
+
+    exclude "LICENSE.txt"
+}
+
+
+minecraft {
+    version = "1.8.9-11.15.1.2318-1.8.9"
+    runDir = "run"
+    mappings = "stable_22"
+    makeObfSourceJar = false
+    clientJvmArgs += ["-Xmx2048m -Xms2048m", "-Ddev-mode"]
+}
+
+mixin {
+    defaultObfuscationEnv searge
+    add sourceSets.main, "mixins.vape.refmap.json"
+}
+
+jar {
+    manifestContentCharset 'utf-8'
+    metadataCharset 'utf-8'
+    manifest.attributes(
+            "FMLCorePlugin": "rip.vape.injection.forge.TransformerLoader",
+            "FMLCorePluginContainsFMLMod": true,
+            "ForceLoadAsMod": true,
+            "MixinConfigs": "mixins.vape.json",
+            "ModSide": "CLIENT",
+            "TweakClass": "org.spongepowered.asm.launch.MixinTweaker",
+            "TweakOrder": "0",
+            "FMLAT": "vape_at.cfg",
+    )
+}
+
+reobf {
+    shadowJar {
+        mappingType = "SEARGE"
+    }
+}
+
+processResources {
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    filesMatching("mcmod.info") {
+        expand "version": project.version, "mcversion": project.minecraft.version
+    }
+
+    rename "(.+_at.cfg)", "META-INF/\$1"
+}
+
+tasks.register('moveResources') {
+    doLast {
+        ant.move file: "${buildDir}/resources/main",
+                todir: "${buildDir}/classes/java"
+    }
+}
+
+moveResources.dependsOn(processResources)
+classes.dependsOn(moveResources)
