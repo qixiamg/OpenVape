@@ -7,7 +7,7 @@ The real Vape Client source
 1. Deobf
 2. Fix codes
 
-If you want help me do this, please create a Pull request
+If you want to help me do this, please create a Pull request
 
 ## The fake vape source
 
