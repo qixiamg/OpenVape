@@ -1,5 +1,7 @@
 # OpenVape
 
+[Read this in Chinese](README-CN.md)
+
 The real Vape Client source
 
 ## What I am working
