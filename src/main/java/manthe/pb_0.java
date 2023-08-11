@@ -47,7 +47,7 @@ implements BI {
     }
 
     public String d() {
-        return this.d.replace("\u00a7", "");
+        return this.d.replace("§", "");
     }
 
     public DX e() {
@@ -63,7 +63,7 @@ implements BI {
     }
 
     public String toString() {
-        return this.d.replace("\u00a7", "");
+        return this.d.replace("§", "");
     }
 
     public boolean c() {

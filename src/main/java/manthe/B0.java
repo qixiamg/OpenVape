@@ -5,9 +5,9 @@ package manthe;
 
 class B0
 implements vK {
-    final cb_0 a;
+    final VapeSettings a;
 
-    B0(cb_0 cb_02) {
+    B0(VapeSettings cb_02) {
         this.a = cb_02;
     }
 

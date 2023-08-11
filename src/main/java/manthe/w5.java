@@ -101,7 +101,7 @@ extends wM {
                 for (tR tR2 : this.C) {
                     tR2.a();
                 }
-                if (this.F.t().size() <= 0) continue;
+                if (this.F.getValues().size() <= 0) continue;
                 this.F().M();
             }
             zu_0.W = null;

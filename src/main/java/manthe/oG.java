@@ -3,13 +3,6 @@
  */
 package manthe;
 
-import manthe.A5;
-import manthe.cb_0;
-import manthe.ds_2;
-import manthe.ei_0;
-import manthe.on;
-import manthe.z1;
-
 class oG
 extends Thread {
     final z1 a;
@@ -29,7 +22,7 @@ extends Thread {
                 if (bl) {
                     boolean bl3;
                     ei_0 ei_02 = ds_2.s().m();
-                    if (cb_0.f() && !ei_02.h() && !z1.c(this.a)) {
+                    if (VapeSettings.f() && !ei_02.h() && !z1.c(this.a)) {
                         ei_0.a(ei_02.i(), true);
                         z1.a(this.a, true);
                     }

@@ -78,7 +78,7 @@ extends Module {
                 }
                 float f14 = f12 + Y.a(eJ2.U() - f12);
                 eJ2.a(d3, d4, d5, f14, eJ2.K());
-                eJ2.bp().a(cb_0.h ? fU.a(eJ2.z(), eJ2.Y().l(), eJ2.g(), f12, f13, false) : fU.a(eJ2.z(), eJ2.Y().l(), eJ2.l(), eJ2.g(), f12, f13, false));
+                eJ2.bp().a(VapeSettings.h ? fU.a(eJ2.z(), eJ2.Y().l(), eJ2.g(), f12, f13, false) : fU.a(eJ2.z(), eJ2.Y().l(), eJ2.l(), eJ2.g(), f12, f13, false));
                 kF2.a(true);
             }
         }

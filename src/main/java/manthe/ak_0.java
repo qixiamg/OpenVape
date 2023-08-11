@@ -215,7 +215,7 @@ extends yt_0 {
 
     @Override
     public String g() {
-        return String.format(" %s7[%sr%s%s7]%sr %s", cb_0.v, cb_0.v, this.a(), cb_0.v, cb_0.v, this.r());
+        return String.format(" %s7[%sr%s%s7]%sr %s", VapeSettings.v, VapeSettings.v, this.a(), VapeSettings.v, VapeSettings.v, this.r());
     }
 
     @Override

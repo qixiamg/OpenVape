@@ -70,7 +70,7 @@ extends DP<mD> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
     }
 
     public mD b(String string, int n6) {

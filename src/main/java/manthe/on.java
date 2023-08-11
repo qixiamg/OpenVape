@@ -53,7 +53,7 @@ public class on {
     private ng O;
     private v_0 V;
     private bu z;
-    private cb_0 J;
+    private VapeSettings J;
     private yf_0 u;
     private c8_0 E;
     private sD x;
@@ -242,7 +242,7 @@ lbl19:
                 this.K = new c_();
                 this.V = new v_0();
                 this.z = new bu();
-                this.J = new cb_0();
+                this.J = new VapeSettings();
                 this.u = new yf_0();
                 this.L = new cr_0();
                 this.L.g();
@@ -418,7 +418,7 @@ lbl19:
         }
     }
 
-    public cb_0 t() {
+    public VapeSettings t() {
         return this.J;
     }
 

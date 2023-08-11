@@ -33,7 +33,7 @@ extends Module {
         if (ds_2.k().e() || ds_2.x().d()) {
             return;
         }
-        boolean bl = cb_0.f();
+        boolean bl = VapeSettings.f();
         gb_0 gb_02 = ds_2.I();
         if (bl) {
             if (gb_02.h().e() && !gb_02.g().equals(g4.g())) {
@@ -69,7 +69,7 @@ extends Module {
                 for (int i = 44; i >= 9; --i) {
                     float f13;
                     fG fG3 = fI3.a(i).f();
-                    if (fG3.e() || !((f13 = (float)cb_0.c(fG3)) > f12)) continue;
+                    if (fG3.e() || !((f13 = (float) VapeSettings.c(fG3)) > f12)) continue;
                     f12 = f13;
                     n10 = i;
                 }

@@ -12,10 +12,10 @@ import java.awt.Color;
  */
 class xj_0
 extends xd {
-    final cb_0 G;
+    final VapeSettings G;
     final wp_0 F;
 
-    xj_0(wp_0 wp_02, ColorValue dE, cb_0 cb_02) {
+    xj_0(wp_0 wp_02, ColorValue dE, VapeSettings cb_02) {
         this.F = wp_02;
         this.G = cb_02;
         super(dE);
@@ -23,7 +23,7 @@ extends xd {
 
     @Override
     public boolean b() {
-        return this.G.t.u();
+        return this.G.teamsByColor.u();
     }
 
     @Override

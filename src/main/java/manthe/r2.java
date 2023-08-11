@@ -25,7 +25,7 @@ extends r1 {
             this.af.b(p12);
             p12.c(this.af.q());
         }
-        rg_0 rg_02 = on.p.t().s;
+        rg_0 rg_02 = on.p.t().syncSettingsState;
         rg_02.b(15.0);
         rg_02.c(this.af.q());
         rg_02.b("Save your settings");

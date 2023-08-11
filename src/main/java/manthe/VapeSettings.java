@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
+import javassist.bytecode.CodeAttribute;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import rip.vape.module.Module;
@@ -22,15 +23,15 @@ import rip.vape.value.ColorValue;
 /*
  * Renamed from manthe.cB
  */
-public class cb_0 {
+public class VapeSettings {
     private static final HashMap<Character, Color> L = new HashMap<>();
     public static boolean h;
     public static boolean C;
     public static String v;
-    public final rg_0 s = new rg_0("Sync Settings", false);
-    public final BooleanValue u = BooleanValue.createValue((Object)this, "Teams by server", false, "Ignore players on your team designated by the server\n\u00a7cThis is not guaranteed to be accurate, as server teams are assigned by the server");
-    public final BooleanValue t = BooleanValue.createValue((Object)this, "Teams by color", false, "Ignore players with the selected name color");
-    public final BooleanValue K = BooleanValue.createValue((Object)this, "Recolor visuals", false, "Changes colors of visuals(Tracers, ESP) to their according team color");
+    public final rg_0 syncSettingsState = new rg_0("Sync Settings", false);
+    public final BooleanValue teamsByServer = BooleanValue.createValue(this, "Teams by server", false, "Ignore players on your team designated by the server\n§cThis is not guaranteed to be accurate, as server teams are assigned by the server");
+    public final BooleanValue teamsByColor = BooleanValue.createValue(this, "Teams by color", false, "Ignore players with the selected name color");
+    public final BooleanValue recolorVisuals = BooleanValue.createValue(this, "Recolor visuals", false, "Changes colors of visuals(Tracers, ESP) to their according team color");
     private final HashMap<pb_0, Character> j = new HashMap<>();
     private final pb_0 p;
     private final pb_0 l;
@@ -48,74 +49,74 @@ public class cb_0 {
     private final pb_0 H;
     private final pb_0 w;
     private final pb_0 q;
-    public final BooleanValue O = BooleanValue.createValue((Object)this, "Auto-Detect color", true, "Automatically detects your team color\n\u00a7cThis is not guaranteed to be accurate, this relies on the server giving you the same name color as your teammates");
+    public final BooleanValue O = BooleanValue.createValue(this, "Auto-Detect color", true, "Automatically detects your team color\n§cThis is not guaranteed to be accurate, this relies on the server giving you the same name color as your teammates");
     private final List<BasicValue> J;
-    public ColorValue r = ColorValue.createValue((Object)this, "Gui Color", new Color(5, 134, 105));
+    public ColorValue r = ColorValue.createValue(this, "Gui Color", new Color(5, 134, 105));
     public BooleanValue y = BooleanValue.createValue(this, "MiddleClick friends", true, "Click middle mouse button to add the player you are hovering over as a friend");
-    public BooleanValue x = BooleanValue.createValue((Object)this, "Blatant mode", false, "Required for certain features.\nThis may make your client detectable(via screenshare) until you restart Minecraft.\nThis cannot be disabled once enabled.");
+    public BooleanValue x = BooleanValue.createValue(this, "Blatant mode", false, "Required for certain features.\nThis may make your client detectable(via screenshare) until you restart Minecraft.\nThis cannot be disabled once enabled.");
     public y0 E;
-    public BooleanValue f = BooleanValue.createValue((Object)this, "Show NBT Tags", false, "Shows NBT tags set by the server.\nUseful for servers with custom items.");
-    public BooleanValue n = BooleanValue.createValue((Object)this, "Enable on load", false, "Enable blatant mode upon injecting vape");
-    public BooleanValue N = BooleanValue.createValue((Object)this, "Speed Check", false, "Disables any active movement modules\nwhen enabling another.");
-    public BooleanValue z = BooleanValue.createValue((Object)this, "Lobby Check", false, "Temporarily disables certain features in server lobbies.");
-    public BooleanValue a = BooleanValue.createValue((Object)this, "Sanity Check", false, "Disables all modules when you connect/disconnect from a server.");
-    public BooleanValue k = BooleanValue.createValue((Object)this, "Health prediction", false, "Estimates player health on pvp servers\nBy default attacks and health pots will be estimated\nNOTE: This feature may not always be accurate!");
-    public BooleanValue i = BooleanValue.createValue((Object)this, "Estimate Food", true, "Automatically estimates food + healing from food.");
-    public BooleanValue A = BooleanValue.createValue((Object)this, "Estimate Fall", true, "Automatically estimates damage from falling.");
+    public BooleanValue f = BooleanValue.createValue(this, "Show NBT Tags", false, "Shows NBT tags set by the server.\nUseful for servers with custom items.");
+    public BooleanValue n = BooleanValue.createValue(this, "Enable on load", false, "Enable blatant mode upon injecting vape");
+    public BooleanValue N = BooleanValue.createValue(this, "Speed Check", false, "Disables any active movement modules\nwhen enabling another.");
+    public BooleanValue z = BooleanValue.createValue(this, "Lobby Check", false, "Temporarily disables certain features in server lobbies.");
+    public BooleanValue a = BooleanValue.createValue(this, "Sanity Check", false, "Disables all modules when you connect/disconnect from a server.");
+    public BooleanValue k = BooleanValue.createValue(this, "Health prediction", false, "Estimates player health on pvp servers\nBy default attacks and health pots will be estimated\nNOTE: This feature may not always be accurate!");
+    public BooleanValue i = BooleanValue.createValue(this, "Estimate Food", true, "Automatically estimates food + healing from food.");
+    public BooleanValue A = BooleanValue.createValue(this, "Estimate Fall", true, "Automatically estimates damage from falling.");
     public DX d;
     private static int e;
 
-    public cb_0() {
-        this.p = new pb_0("\u00a7aGreen", 0.8);
+    public VapeSettings() {
+        this.p = new pb_0("§aGreen", 0.8);
         this.j.put(this.p, Character.valueOf('a'));
-        this.l = new pb_0("\u00a72Dark Green", 0.8);
+        this.l = new pb_0("§2Dark Green", 0.8);
         this.j.put(this.l, Character.valueOf('2'));
-        this.I = new pb_0("\u00a7cRed", 0.8);
+        this.I = new pb_0("§cRed", 0.8);
         this.j.put(this.I, Character.valueOf('c'));
-        this.o = new pb_0("\u00a74Dark Red", 0.8);
+        this.o = new pb_0("§4Dark Red", 0.8);
         this.j.put(this.o, Character.valueOf('4'));
-        this.G = new pb_0("\u00a7eYellow", 0.8);
+        this.G = new pb_0("§eYellow", 0.8);
         this.j.put(this.G, Character.valueOf('e'));
-        this.c = new pb_0("\u00a76Gold", 0.8);
+        this.c = new pb_0("§6Gold", 0.8);
         this.j.put(this.c, Character.valueOf('6'));
-        this.F = new pb_0("\u00a79Blue", 0.8);
+        this.F = new pb_0("§9Blue", 0.8);
         this.j.put(this.F, Character.valueOf('9'));
-        this.D = new pb_0("\u00a71Dark Blue", 0.8);
+        this.D = new pb_0("§1Dark Blue", 0.8);
         this.j.put(this.D, Character.valueOf('1'));
-        this.m = new pb_0("\u00a7bAqua", 0.8);
+        this.m = new pb_0("§bAqua", 0.8);
         this.j.put(this.m, Character.valueOf('b'));
-        this.b = new pb_0("\u00a73Dark Aqua", 0.8);
+        this.b = new pb_0("§3Dark Aqua", 0.8);
         this.j.put(this.b, Character.valueOf('3'));
-        this.B = new pb_0("\u00a7dPurple", 0.8);
+        this.B = new pb_0("§dPurple", 0.8);
         this.j.put(this.B, Character.valueOf('d'));
-        this.M = new pb_0("\u00a75Dark Purple", 0.8);
+        this.M = new pb_0("§5Dark Purple", 0.8);
         this.j.put(this.M, Character.valueOf('5'));
-        this.g = new pb_0("\u00a77Gray", 0.8);
+        this.g = new pb_0("§7Gray", 0.8);
         this.j.put(this.g, Character.valueOf('7'));
-        this.H = new pb_0("\u00a78Dark Gray", 0.8);
-        this.j.put(this.H, Character.valueOf('8'));
-        this.w = new pb_0("\u00a7fWhite", 0.8);
-        this.j.put(this.w, Character.valueOf('f'));
-        this.q = new pb_0("\u00a70Black", 0.8);
+        this.H = new pb_0("§8Dark Gray", 0.8);
+        this.j.put(this.H, '8');
+        this.w = new pb_0("§fWhite", 0.8);
+        this.j.put(this.w, 'f');
+        this.q = new pb_0("§0Black", 0.8);
         this.j.put(this.q, Character.valueOf('0'));
-        this.d = DX.a((Object)this, "Your team color", "Uses this color to determine your team", this.p, 2, this.o, this.I, this.c, this.G, this.l, this.p, this.m, this.b, this.D, this.F, this.B, this.M, this.w, this.g, this.H, this.q);
-        this.t.a(this.K, this.O, this.d);
+        this.d = DX.a(this, "Your team color", "Uses this color to determine your team", this.p, 2, this.o, this.I, this.c, this.G, this.l, this.p, this.m, this.b, this.D, this.F, this.B, this.M, this.w, this.g, this.H, this.q);
+        this.teamsByColor.a(this.recolorVisuals, this.O, this.d);
         this.r.e(true);
-        this.J = new ArrayList<BasicValue>(Arrays.asList(this.r, this.u, this.t, this.K, this.O, this.d, this.y, this.z, this.a, this.f, this.x, this.n, this.N, this.k, this.i, this.A));
+        this.J = new ArrayList<BasicValue>(Arrays.asList(this.r, this.teamsByServer, this.teamsByColor, this.recolorVisuals, this.O, this.d, this.y, this.z, this.a, this.f, this.x, this.n, this.N, this.k, this.i, this.A));
         this.k.a(this.i, this.A);
         if (on.C()) {
-            ((qD)this.x.getDefaultValue()).a().a(new oj(this));
-            ((qD)this.x.getDefaultValue()).a().a(new uz(this));
+            this.x.getDefaultValue().a().a(new oj(this));
+            this.x.getDefaultValue().a().a(new uz(this));
         } else {
-            ((qD)this.x.getDefaultValue()).a().b(true);
-            ((qD)this.x.getDefaultValue()).b(true);
-            ((qD)this.x.getDefaultValue()).b("Blatant mode not yet available for this Minecraft version");
+            this.x.getDefaultValue().a().b(true);
+            this.x.getDefaultValue().b(true);
+            this.x.getDefaultValue().b("Blatant mode not yet available for this Minecraft version");
         }
-        ((qD)this.n.getDefaultValue()).a().a(new B0(this));
-        ((qD)this.N.getDefaultValue()).a().a(new B3(this));
-        this.x.getRuntimeCopyException(false);
-        this.x.a(new BasicValue[]{this.n});
-        this.x.a(new BasicValue[]{this.N});
+        this.n.getDefaultValue().a().a(new B0(this));
+        this.N.getDefaultValue().a().a(new B3(this));
+        this.x.setTypeByString(String.valueOf(false));
+        this.x.a(this.n);
+        this.x.a(this.N);
     }
 
     public static boolean f() {
@@ -138,7 +139,7 @@ public class cb_0 {
 
     public static boolean a(ei_0 ei_02) {
         int n6 = ei_02.i();
-        return n6 > 0 ? Keyboard.isKeyDown((int)n6) : Mouse.isButtonDown((int)(100 + n6));
+        return n6 > 0 ? Keyboard.isKeyDown(n6) : Mouse.isButtonDown(100 + n6);
     }
 
     public static double c(fG fG2) {
@@ -148,8 +149,8 @@ public class cb_0 {
             e6 e62 = new e6(d5_02.g().toArray()[0]);
             d3 = e62.g();
         }
-        d3 += (double)eq_0.a(fG2, ey_0.f());
-        return d3 += (double)((float)eq_0.a(e5.g().l(), fG2) * 0.01f);
+        d3 += eq_0.a(fG2, ey_0.f());
+        return d3 += (float)eq_0.a(e5.g().l(), fG2) * 0.01f;
     }
 
     public static double a(fG fG2) {
@@ -159,7 +160,7 @@ public class cb_0 {
             e6 e62 = new e6(d5_02.g().toArray()[0]);
             d3 = e62.g();
         }
-        return d3 += (double)eq_0.a(fG2, ey_0.f());
+        return d3 += eq_0.a(fG2, ey_0.f());
     }
 
     public static double b(fG fG2) {
@@ -169,14 +170,14 @@ public class cb_0 {
             e6 e62 = new e6(d5_02.g().toArray()[0]);
             d3 = e62.g();
         }
-        return d3 += (double)eq_0.a(fG2, ey_0.f());
+        return d3 += eq_0.a(fG2, ey_0.f());
     }
 
     public static boolean a(int n6) {
         if (n6 < 0) {
-            return Mouse.isButtonDown((int)(100 + n6));
+            return Mouse.isButtonDown(100 + n6);
         }
-        return Keyboard.isKeyDown((int)n6);
+        return Keyboard.isKeyDown(n6);
     }
 
     private static Color a(char c2) {
@@ -278,7 +279,7 @@ public class cb_0 {
     }
 
     public void g() {
-        if (this.t.u().booleanValue() && this.O.u().booleanValue()) {
+        if (this.teamsByColor.u().booleanValue() && this.O.u().booleanValue()) {
             eJ eJ2 = ds_2.k();
             if (eJ2.e()) {
                 return;
@@ -303,7 +304,7 @@ public class cb_0 {
             return false;
         }
         e2 e22 = new e2(ex_02);
-        if (this.t.u().booleanValue()) {
+        if (this.teamsByColor.u().booleanValue()) {
             String string = xp_0.a(e22);
             char c2 = this.j.get(this.d.v()).charValue();
             if (string.startsWith(v) && string.length() > 3) {
@@ -314,7 +315,7 @@ public class cb_0 {
                 }
             }
         }
-        if (this.u.u().booleanValue()) {
+        if (this.teamsByServer.u().booleanValue()) {
             if (e22.a9().e() || ds_2.k().a9().e()) {
                 return false;
             }
@@ -370,7 +371,7 @@ public class cb_0 {
     }
 
     public boolean c() {
-        return this.z.u() != false && !ds_2.k().a8().m();
+        return this.z.u() && !ds_2.k().a8().m();
     }
 
     public void a(Module y52) {
@@ -388,14 +389,14 @@ public class cb_0 {
     }
 
     public L a(eC eC2, boolean bl) {
-        if (!(bl || this.t.u().booleanValue() && this.K.u().booleanValue())) {
+        if (!(bl || this.teamsByColor.u().booleanValue() && this.recolorVisuals.u().booleanValue())) {
             return null;
         }
         String string = xp_0.a(eC2);
         if (string.startsWith(v) && string.length() > 3) {
             int n6 = string.charAt(1) == 'r' ? 3 : 1;
             char c2 = string.charAt(n6);
-            return new L(cb_0.a(c2));
+            return new L(VapeSettings.a(c2));
         }
         return null;
     }
@@ -415,10 +416,10 @@ public class cb_0 {
     }
 
     static {
-        cb_0.b(0);
+        VapeSettings.b(0);
         h = V.c() > 13;
         C = false;
-        v = new String(new char[]{'\u00a7'});
+        v = String.valueOf('§');
     }
 
     public static void b(int n6) {
@@ -430,14 +431,14 @@ public class cb_0 {
     }
 
     public static int a() {
-        int n6 = cb_0.b();
+        int n6 = VapeSettings.b();
         if (n6 == 0) {
             return 29;
         }
         return 0;
     }
 
-    private static CodeAttribute$RuntimeCopyException a(CodeAttribute$RuntimeCopyException codeAttribute$RuntimeCopyException) {
+    private static CodeAttribute.RuntimeCopyException getRuntimeCopyException(CodeAttribute.RuntimeCopyException codeAttribute$RuntimeCopyException) {
         return codeAttribute$RuntimeCopyException;
     }
 }

@@ -76,7 +76,7 @@ extends Module {
         if (this.z != null && this.z.e()) {
             this.z = null;
         }
-        if (this.V.u().booleanValue() && !cb_0.f()) {
+        if (this.V.u().booleanValue() && !VapeSettings.f()) {
             this.z = null;
             this.Y();
             return;
@@ -85,7 +85,7 @@ extends Module {
             this.Y();
             this.z = null;
         }
-        if (this.V.u().booleanValue() && cb_0.f() && this.z == null || !this.V.u().booleanValue()) {
+        if (this.V.u().booleanValue() && VapeSettings.f() && this.z == null || !this.V.u().booleanValue()) {
             ej_0 ej_02 = this.Z();
             if (!this.V.u().booleanValue()) {
                 ++this.S;

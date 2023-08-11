@@ -42,7 +42,7 @@ public abstract class BasicValue<T, V extends p1> implements BI {
 
     public abstract void b(T var1);
 
-    public abstract void getRuntimeCopyException(String var1);
+    public abstract void setTypeByString(String var1);
 
     public void b(boolean bl) {
         this.a = bl;
@@ -107,7 +107,7 @@ public abstract class BasicValue<T, V extends p1> implements BI {
 
     public boolean isCorrectValue(JsonObject jsonObject) {
         if (jsonObject.get("id").getAsString().equalsIgnoreCase(this.getValueName()) && jsonObject.has("value")) {
-            this.getRuntimeCopyException(jsonObject.get("value").getAsString());
+            this.setTypeByString(jsonObject.get("value").getAsString());
             this.l();
             return true;
         }

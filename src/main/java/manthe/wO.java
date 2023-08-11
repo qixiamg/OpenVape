@@ -7,10 +7,10 @@ import java.awt.Color;
 
 class wO
 extends wK {
-    final cb_0 S;
+    final VapeSettings S;
     final wp_0 T;
 
-    wO(wp_0 wp_02, BooleanValue dB, cb_0 cb_02) {
+    wO(wp_0 wp_02, BooleanValue dB, VapeSettings cb_02) {
         this.T = wp_02;
         this.S = cb_02;
         super(dB);
@@ -18,7 +18,7 @@ extends wK {
 
     @Override
     public boolean b() {
-        return this.S.t.u();
+        return this.S.teamsByColor.u();
     }
 
     @Override

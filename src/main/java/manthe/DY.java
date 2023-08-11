@@ -38,7 +38,7 @@ extends BasicValue<aj_2, rh_0> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
         this.r().a(string);
     }
 }

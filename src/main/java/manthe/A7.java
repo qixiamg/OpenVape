@@ -101,7 +101,7 @@ extends Module {
         ds_2.k().u(ds_2.k().U());
         if (this.U != null) {
             eJ eJ2 = ds_2.k();
-            this.U.a(eJ2.z(), cb_0.h ? eJ2.l() : eJ2.l() - 1.5, eJ2.g(), this.Q, this.H);
+            this.U.a(eJ2.z(), VapeSettings.h ? eJ2.l() : eJ2.l() - 1.5, eJ2.g(), this.Q, this.H);
         }
         if (!on.p.h()) {
             ds_2.t().g().a(new d8_0(null));
@@ -156,7 +156,7 @@ extends Module {
                     ky_02.setPacket(f_.a(this.W));
                     ++this.K;
                 } else {
-                    if (cb_0.h) {
+                    if (VapeSettings.h) {
                         ky_02.setPacket(ft_0.a(this.R, this.O, this.M, this.W));
                     } else {
                         double d3 = ds_2.k().s().l() - ds_2.k().l();
@@ -235,7 +235,7 @@ extends Module {
             }
             this.U.a(d3, d4, d5, f10, f11);
             this.E = true;
-            ds_2.k().bp().a(cb_0.h ? fU.a(e22.z(), e22.Y().l(), e22.g(), e22.U(), e22.K(), false) : fU.a(e22.z(), e22.s().l(), e22.l(), e22.g(), e22.U(), e22.K(), false));
+            ds_2.k().bp().a(VapeSettings.h ? fU.a(e22.z(), e22.Y().l(), e22.g(), e22.U(), e22.K(), false) : fU.a(e22.z(), e22.s().l(), e22.l(), e22.g(), e22.U(), e22.K(), false));
             this.E = false;
             kF2.a(true);
         }
@@ -285,7 +285,7 @@ extends Module {
         this.U.k(eJ2.k());
         this.U.l(eJ2.v() ? 0.0 : eJ2.D());
         this.U.d(eJ2.u());
-        this.U.a(eJ2.z(), cb_0.h ? eJ2.l() : eJ2.s().l(), eJ2.g(), eJ2.U(), eJ2.K());
+        this.U.a(eJ2.z(), VapeSettings.h ? eJ2.l() : eJ2.s().l(), eJ2.g(), eJ2.U(), eJ2.K());
     }
 
     @Override
@@ -320,7 +320,7 @@ extends Module {
 
     public void a(eC eC2, ky_0 ky_02) {
         double d3 = eC2.z() - this.T;
-        double d4 = (cb_0.h ? eC2.Y().l() : eC2.s().l()) - this.X;
+        double d4 = (VapeSettings.h ? eC2.Y().l() : eC2.s().l()) - this.X;
         double d5 = eC2.g() - this.v;
         double d6 = eC2.U() - this.A;
         double d7 = eC2.K() - this.G;
@@ -329,23 +329,23 @@ extends Module {
         this.E = true;
         if (eC2.m().e()) {
             if (bl && bl2) {
-                ky_02.setPacket(cb_0.h ? fU.a(eC2.z(), eC2.Y().l(), eC2.g(), eC2.U(), eC2.K(), eC2.v()) : fU.a(eC2.z(), eC2.s().l(), eC2.l(), eC2.g(), eC2.U(), eC2.K(), eC2.v()));
+                ky_02.setPacket(VapeSettings.h ? fU.a(eC2.z(), eC2.Y().l(), eC2.g(), eC2.U(), eC2.K(), eC2.v()) : fU.a(eC2.z(), eC2.s().l(), eC2.l(), eC2.g(), eC2.U(), eC2.K(), eC2.v()));
             } else if (bl) {
-                ky_02.setPacket(cb_0.h ? ft_0.a(eC2.z(), eC2.Y().l(), eC2.g(), eC2.v()) : ft_0.a(eC2.z(), eC2.s().l(), eC2.l(), eC2.g(), eC2.v()));
+                ky_02.setPacket(VapeSettings.h ? ft_0.a(eC2.z(), eC2.Y().l(), eC2.g(), eC2.v()) : ft_0.a(eC2.z(), eC2.s().l(), eC2.l(), eC2.g(), eC2.v()));
             } else if (bl2) {
                 ky_02.setPacket(fa_0.a(eC2.U(), eC2.K(), eC2.v()));
             } else {
                 ky_02.setPacket(f_.a(eC2.v()));
             }
         } else {
-            ky_02.setPacket(cb_0.h ? fU.a(eC2.k(), -999.0, eC2.u(), eC2.U(), eC2.K(), eC2.v()) : fU.a(eC2.z(), -999.0, -999.0, eC2.g(), eC2.U(), eC2.K(), eC2.v()));
+            ky_02.setPacket(VapeSettings.h ? fU.a(eC2.k(), -999.0, eC2.u(), eC2.U(), eC2.K(), eC2.v()) : fU.a(eC2.z(), -999.0, -999.0, eC2.g(), eC2.U(), eC2.K(), eC2.v()));
             bl = false;
         }
         this.E = false;
         ++this.K;
         if (bl) {
             this.T = eC2.z();
-            this.X = cb_0.h ? eC2.l() : eC2.s().l();
+            this.X = VapeSettings.h ? eC2.l() : eC2.s().l();
             this.v = eC2.g();
             this.K = 0;
         }
@@ -586,10 +586,10 @@ extends Module {
         int n11 = ds_2.s().g().i();
         int n12 = ds_2.s().n().i();
         double d3 = this.B.a() / 5.0;
-        if (cb_0.a(ds_2.s().l()) && ds_2.N()) {
+        if (VapeSettings.a(ds_2.s().l()) && ds_2.N()) {
             this.V += d3;
             this.N += d3;
-        } else if (cb_0.a(ds_2.s().u()) && ds_2.N()) {
+        } else if (VapeSettings.a(ds_2.s().u()) && ds_2.N()) {
             this.V -= d3;
             this.N -= d3;
         }

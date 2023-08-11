@@ -20,6 +20,7 @@ extends BasicValue<String, p1> {
     @Override
     public void b(String string) {
         this.l = string;
+        return 0;
     }
 
     @Override

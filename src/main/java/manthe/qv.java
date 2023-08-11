@@ -3,11 +3,6 @@
  */
 package manthe;
 
-import manthe.cb_0;
-import manthe.ds_2;
-import manthe.gw_0;
-import manthe.rD;
-
 class qv
 extends Thread {
     final rD a;
@@ -24,7 +19,7 @@ extends Thread {
             rD.c(this.a).z().a("Authenticating...");
             gw_0 gw_02 = gw_0.a(rD.e(this.a).c(), "", "", "mojang");
             ds_2.a(gw_02);
-            rD.c(this.a).z().a(cb_0.v + "aLogged in to " + gw_02.f() + " (Offline)");
+            rD.c(this.a).z().a(VapeSettings.v + "aLogged in to " + gw_02.f() + " (Offline)");
         }
         catch (Exception exception) {
             // empty catch block

@@ -165,7 +165,7 @@ extends y8 {
         for (Object e10 : arrayList2) {
             ej_0 ej_02;
             ex_0 ex_02 = new ex_0(e10);
-            if (cb_0.h && ex_02.a(A5.a8) || !ex_02.a(A5.cF) || !this.a(ej_02 = new ej_0(e10))) continue;
+            if (VapeSettings.h && ex_02.a(A5.a8) || !ex_02.a(A5.cF) || !this.a(ej_02 = new ej_0(e10))) continue;
             arrayList.add(ej_02);
         }
         if (arrayList.isEmpty()) {

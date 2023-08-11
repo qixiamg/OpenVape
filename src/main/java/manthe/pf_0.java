@@ -4,29 +4,6 @@
 package manthe;
 
 import java.util.List;
-import manthe.A5;
-import manthe.V;
-import manthe.Y;
-import manthe.bK;
-import manthe.bf_0;
-import manthe.cb_0;
-import manthe.cy_0;
-import manthe.dj_0;
-import manthe.ds_2;
-import manthe.dx_2;
-import manthe.dy_2;
-import manthe.e2;
-import manthe.eC;
-import manthe.eg_1;
-import manthe.ej_0;
-import manthe.ex_0;
-import manthe.fG;
-import manthe.fP;
-import manthe.fS;
-import manthe.gK;
-import manthe.gb_0;
-import manthe.on;
-import manthe.v2;
 
 /*
  * Renamed from manthe.pf
@@ -409,7 +386,7 @@ public class pf_0 {
 
     public static int a(eC eC2) {
         int n6 = 0;
-        if (cb_0.h) {
+        if (VapeSettings.h) {
             fS fS2 = ds_2.k().bp();
             List list = dy_2.f().a(fS2.g());
             for (Object e10 : list) {

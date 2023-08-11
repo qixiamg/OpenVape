@@ -86,7 +86,7 @@ extends yc_0 {
                     if ((zG2 = cr_02.b(zG.class)).N() && !zG2.U()) {
                         return;
                     }
-                    if (this.v.E.u().booleanValue() && !cb_0.f()) {
+                    if (this.v.E.u().booleanValue() && !VapeSettings.f()) {
                         return;
                     }
                     if (this.v.aa.u().booleanValue() && ds_2.x().d()) {

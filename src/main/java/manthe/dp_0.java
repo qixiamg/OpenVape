@@ -78,7 +78,7 @@ extends DP<rb_0> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
     }
 
     public rb_0 c(String string) {

@@ -142,10 +142,10 @@ extends Module {
             object = list.get(n6);
             String string = ((fG)object).j();
             if (this.y.u().booleanValue() && n6 == 0) {
-                string = cb_0.v + "a[" + cb_0.v + "f" + (int)eJ2.a(e82) + cb_0.v + "a]" + cb_0.v + "r " + string;
+                string = VapeSettings.v + "a[" + VapeSettings.v + "f" + (int)eJ2.a(e82) + VapeSettings.v + "a]" + VapeSettings.v + "r " + string;
             }
             if (((fG)object).h() > 1 && ((fG)object).n() > 1) {
-                string = string + cb_0.v + "r x" + ((fG)object).n();
+                string = string + VapeSettings.v + "r x" + ((fG)object).n();
             }
             n10 = Math.max(dr_12.c(string) / 2, n10);
             stringArray[n6] = string;

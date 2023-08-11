@@ -200,7 +200,7 @@ extends Module {
         if (eJ2.d() || this.v.d() || !this.y.u().booleanValue()) {
             return;
         }
-        this.v.a(eJ2.z(), cb_0.h ? eJ2.l() : eJ2.l() - 1.5, eJ2.g(), eJ2.U(), eJ2.K());
+        this.v.a(eJ2.z(), VapeSettings.h ? eJ2.l() : eJ2.l() - 1.5, eJ2.g(), eJ2.U(), eJ2.K());
         this.v.r(eJ2.aP());
     }
 

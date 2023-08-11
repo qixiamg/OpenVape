@@ -5,25 +5,6 @@ package manthe;
 
 import java.util.List;
 import javassist.bytecode.CodeAttribute$RuntimeCopyException;
-import manthe.A5;
-import manthe.V;
-import manthe.Y;
-import manthe.cb_0;
-import manthe.cy_0;
-import manthe.dp_2;
-import manthe.ds_2;
-import manthe.ej_0;
-import manthe.ex_0;
-import manthe.fP;
-import manthe.g1;
-import manthe.g4;
-import manthe.gK;
-import manthe.gO;
-import manthe.gb_0;
-import manthe.gg_0;
-import manthe.on;
-import manthe.zO;
-import manthe.zZ;
 
 public class v2 {
     private static zZ d = null;
@@ -197,7 +178,7 @@ public class v2 {
     }
 
     private static void d() {
-        if (cb_0.d()) {
+        if (VapeSettings.d()) {
             return;
         }
         if (d.N() && !d.T().x().booleanValue() || c.N()) {

@@ -91,10 +91,11 @@ public class DF extends BasicValue<Double, sV> {
         }
         ((sV)this.getDefaultValue()).f(d3);
         this.d();
+        return 0;
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
         this.b(Double.parseDouble(string));
     }
 

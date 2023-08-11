@@ -65,7 +65,7 @@ extends Module {
         this.a(this.u.v().H());
         eJ eJ2 = ds_2.k();
         gl_0 gl_02 = ds_2.O();
-        double d4 = d3 = cb_0.h ? eJ2.s().l() : eJ2.l();
+        double d4 = d3 = VapeSettings.h ? eJ2.s().l() : eJ2.l();
         if (this.u.v() == this.v) {
             ks_02.setY(0.0);
             eJ2.l(0.0);

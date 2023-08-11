@@ -147,7 +147,7 @@ public class Module extends yt_0 implements BI {
     }
 
     public String w() {
-        return this.o != null && !this.o.equals("") ? cb_0.v + "7 " + this.o : "";
+        return this.o != null && !this.o.equals("") ? VapeSettings.v + "7 " + this.o : "";
     }
 
     public void a(String string) {
@@ -423,7 +423,7 @@ public class Module extends yt_0 implements BI {
 
     @Override
     public String g() {
-        return String.format(" %s7[%sr%s%s7]%sr %s", cb_0.v, cb_0.v, this.a(), cb_0.v, cb_0.v, this.H());
+        return String.format(" %s7[%sr%s%s7]%sr %s", VapeSettings.v, VapeSettings.v, this.a(), VapeSettings.v, VapeSettings.v, this.H());
     }
 
     public String toString() {

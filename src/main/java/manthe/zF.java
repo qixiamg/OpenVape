@@ -49,7 +49,7 @@ extends Module {
             if (!A5.br.isInstance(e10) || !this.u.d(string = (fv_02 = new fv_0(e10)).j().f())) continue;
             String string2 = "";
             if (this.y.u().booleanValue()) {
-                String string3 = cb_0.v + "a[" + cb_0.v + "f" + (int)eJ2.a((double)fv_02.f(), (double)fv_02.g(), (double)fv_02.h()) + cb_0.v + "a]" + cb_0.v + "r";
+                String string3 = VapeSettings.v + "a[" + VapeSettings.v + "f" + (int)eJ2.a((double)fv_02.f(), (double)fv_02.g(), (double)fv_02.h()) + VapeSettings.v + "a]" + VapeSettings.v + "r";
                 string2 = string2 + string3 + " ";
             }
             string2 = string2 + string + " spawner";

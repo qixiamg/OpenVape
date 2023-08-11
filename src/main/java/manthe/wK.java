@@ -65,7 +65,7 @@ extends wI {
         }
         k9.a(color, (float)d3, (float)d4, "togglebg", this.O, this.D, false);
         k9.a(this.N, (float)d3 + this.K + (float)this.G.o().doubleValue(), (float)d4 + this.K, "toggledot", this.R, this.R, false);
-        if (this.D() != null && this.D() instanceof DR && ((DR)this.D()).t().size() > 0 && ((DR)this.D()).s() && this.F() != null) {
+        if (this.D() != null && this.D() instanceof DR && ((DR)this.D()).getValues().size() > 0 && ((DR)this.D()).s() && this.F() != null) {
             k9.a(wK.b.u, (float)(this.d() + this.e() / 8.0), (float)(this.c() + this.f() - 2.0), "dropdownnotch", 7.0f, 3.0f, false);
         }
     }
@@ -120,7 +120,7 @@ extends wI {
             if (this.F.u().equals(this.T())) {
                 this.F.setType((Boolean)(this.F.u() == false ? 1 : 0));
             }
-            if (this.F.t().size() > 0 && this.F() != null) {
+            if (this.F.getValues().size() > 0 && this.F() != null) {
                 this.F().M();
             }
         }
@@ -131,7 +131,7 @@ extends wI {
     public void f(boolean bl) {
         if (this.F != null) {
             this.F.setType((Boolean)bl);
-            if (this.F.t().size() > 0 && this.F() != null) {
+            if (this.F.getValues().size() > 0 && this.F() != null) {
                 this.F().M();
             }
         }

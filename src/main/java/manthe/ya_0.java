@@ -26,7 +26,7 @@ extends yt_0 {
 
     public ya_0(String string) {
         this.g = string;
-        this.doubleClick.t().add(this.e);
+        this.doubleClick.getValues().add(this.e);
     }
 
     public String l() {
@@ -108,7 +108,7 @@ extends yt_0 {
 
     @Override
     public String g() {
-        return String.format(" %s7[%sr%s%s7]%sr %s", cb_0.v, cb_0.v, this.b(this.j), cb_0.v, cb_0.v, this.l());
+        return String.format(" %s7[%sr%s%s7]%sr %s", VapeSettings.v, VapeSettings.v, this.b(this.j), VapeSettings.v, VapeSettings.v, this.l());
     }
 
     @Override

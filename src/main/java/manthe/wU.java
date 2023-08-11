@@ -191,17 +191,17 @@ extends wI {
                 string = string + y52.H() + ", ";
             }
             if (!(this.s().b(string) > 150.0)) continue;
-            stringBuilder2.append(cb_0.v + "f" + string + "\n");
+            stringBuilder2.append(VapeSettings.v + "f" + string + "\n");
             string = "";
         }
         if (!string.equals("")) {
-            stringBuilder2.append(cb_0.v + "f" + string);
+            stringBuilder2.append(VapeSettings.v + "f" + string);
         }
         if (stringBuilder2.length() > 0) {
             stringBuilder.append("This will remember that you had these modules enabled:\n");
             stringBuilder.append(un_0.a(stringBuilder2.toString(), ", ", ""));
         } else {
-            stringBuilder.append(cb_0.v + "fYou currently have nothing enabled, so nothing with be saved");
+            stringBuilder.append(VapeSettings.v + "fYou currently have nothing enabled, so nothing with be saved");
         }
         return stringBuilder.toString();
     }
@@ -215,17 +215,17 @@ extends wI {
         for (Module y52 : this.N().A()) {
             string = string + y52.H() + ", ";
             if (!(this.s().b(string) > 150.0)) continue;
-            stringBuilder2.append(cb_0.v + "f" + string + "\n");
+            stringBuilder2.append(VapeSettings.v + "f" + string + "\n");
             string = "";
         }
         if (!string.equals("")) {
-            stringBuilder2.append(cb_0.v + "f" + string);
+            stringBuilder2.append(VapeSettings.v + "f" + string);
         }
         if (stringBuilder2.length() > 0) {
             stringBuilder.append("This will re-enable these modules:\n");
             stringBuilder.append(un_0.a(stringBuilder2.toString(), ", ", ""));
         } else {
-            stringBuilder.append(cb_0.v + "fThis profile has no modules saved");
+            stringBuilder.append(VapeSettings.v + "fThis profile has no modules saved");
         }
         return stringBuilder.toString();
     }

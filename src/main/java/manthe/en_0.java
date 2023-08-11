@@ -3,12 +3,6 @@
  */
 package manthe;
 
-import manthe.cb_0;
-import manthe.cy_0;
-import manthe.ei_0;
-import manthe.iz_0;
-import manthe.on;
-
 /*
  * Renamed from manthe.en
  */
@@ -79,14 +73,14 @@ extends cy_0 {
     }
 
     public int v() {
-        if (cb_0.h) {
+        if (VapeSettings.h) {
             return iz_0.p(en_0.a.M().e, this.b);
         }
         return iz_0.u(en_0.a.M().e, this.b) ? 2 : 0;
     }
 
     public void a(int n6) {
-        if (cb_0.h) {
+        if (VapeSettings.h) {
             iz_0.a(en_0.a.M().e, this.b, n6);
         } else {
             iz_0.c(en_0.a.M().e, this.b, n6 > 0);

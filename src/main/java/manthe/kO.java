@@ -31,7 +31,7 @@ extends kl_0 {
             if (!object.N()) continue;
             object.a(this);
         }
-        if (cb_0.C && on.p.t().a.u().booleanValue()) {
+        if (VapeSettings.C && on.p.t().a.u().booleanValue()) {
             boolean bl = false;
             if (this.d.a(A5.O) || this.d.a(A5.cn) || this.d.a(A5.B)) {
                 for (Module y52 : on.p.H().e()) {

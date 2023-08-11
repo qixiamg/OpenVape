@@ -25,7 +25,7 @@ extends BasicValue<List<D4>, rh_0> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
     }
 }
 

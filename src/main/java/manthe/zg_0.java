@@ -191,10 +191,10 @@ extends Module {
             double d5 = 0.10234f + 3.9E-4f * ((float)Math.min(i, 39) / 39.0f);
             double d6 = 0.04093f;
             d3 += d5 - d6;
-            ft_0 ft_02 = cb_0.h ? ft_0.a(eJ2.z(), eJ2.l() + d6 + (d5 - d6) * (double)0.65f, eJ2.g(), false) : ft_0.a(eJ2.z(), eJ2.s().l() + d6 + (d5 - d6) * (double)0.65f, eJ2.l() + d6 + (d5 - d6) * (double)0.65f, eJ2.g(), false);
-            ft_0 ft_03 = cb_0.h ? ft_0.a(eJ2.z(), eJ2.l() + d5, eJ2.g(), false) : ft_0.a(eJ2.z(), eJ2.s().l() + d5, eJ2.l() + d5, eJ2.g(), false);
+            ft_0 ft_02 = VapeSettings.h ? ft_0.a(eJ2.z(), eJ2.l() + d6 + (d5 - d6) * (double)0.65f, eJ2.g(), false) : ft_0.a(eJ2.z(), eJ2.s().l() + d6 + (d5 - d6) * (double)0.65f, eJ2.l() + d6 + (d5 - d6) * (double)0.65f, eJ2.g(), false);
+            ft_0 ft_03 = VapeSettings.h ? ft_0.a(eJ2.z(), eJ2.l() + d5, eJ2.g(), false) : ft_0.a(eJ2.z(), eJ2.s().l() + d5, eJ2.l() + d5, eJ2.g(), false);
             f_ f_2 = f_.a(false);
-            ft_0 ft_04 = cb_0.h ? ft_0.a(eJ2.z(), eJ2.l() + d5, eJ2.g(), false) : ft_0.a(eJ2.z(), eJ2.s().l() + d6, eJ2.l() + d6, eJ2.g(), false);
+            ft_0 ft_04 = VapeSettings.h ? ft_0.a(eJ2.z(), eJ2.l() + d5, eJ2.g(), false) : ft_0.a(eJ2.z(), eJ2.s().l() + d6, eJ2.l() + d6, eJ2.g(), false);
             this.C = true;
             eJ2.bp().a(ft_02);
             eJ2.bp().a(ft_03);

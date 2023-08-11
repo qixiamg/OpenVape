@@ -204,7 +204,7 @@ extends r1 {
             qD2.b(10.0);
             list.add(qD2);
             if (bl) {
-                for (BasicValue ds_04 : ((DR)ds_03).t()) {
+                for (BasicValue ds_04 : ((DR)ds_03).getValues()) {
                     for (JsonElement jsonElement : jsonArray) {
                         JsonObject jsonObject2 = jsonElement.getAsJsonObject();
                         String string = jsonObject2.get("id").getAsString();

@@ -21,6 +21,16 @@ public class BooleanValue extends DR<Boolean, qD> {
         super(object, string, qD2);
     }
 
+    @Override
+    public Boolean n() {
+        return this.y();
+    }
+
+    @Override
+    public void b(Boolean var1) {
+        return 0;
+    }
+
     public BooleanValue(Object object, String string, boolean bl) {
         super(object, string, new qD(string, 10.0));
         ((qD) this.getDefaultValue()).b(10.0);
@@ -97,8 +107,8 @@ public class BooleanValue extends DR<Boolean, qD> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
-        this.setType((Boolean) Boolean.parseBoolean(string));
+    public void setTypeByString(String string) {
+        this.setType(Boolean.parseBoolean(string));
     }
 
     @Override
@@ -107,7 +117,7 @@ public class BooleanValue extends DR<Boolean, qD> {
     }
 
     @Override
-    public boolean b(BasicValue ds_02) {
+    public boolean b(BasicValue basicValue) {
         return this.y();
     }
 

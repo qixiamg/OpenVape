@@ -18,7 +18,7 @@ public abstract class DR<K, C extends p1> extends BasicValue<K, C> {
         }
     }
 
-    private final List<BasicValue> m = new ArrayList<BasicValue>();
+    private final List<BasicValue> values = new ArrayList<>();
 
     public DR(Object object, String string, C c2) {
         super(object, string, c2);
@@ -33,25 +33,25 @@ public abstract class DR<K, C extends p1> extends BasicValue<K, C> {
         return l;
     }
 
-    public List<BasicValue> t() {
-        return this.m;
+    public List<BasicValue> getValues() {
+        return this.values;
     }
 
     public BasicValue r() {
-        for (BasicValue ds_02 : this.t()) {
-            if (!ds_02.equals(this.t().get(this.t().size() - 1))) continue;
-            if (ds_02 instanceof DR) {
-                DR dR = (DR) ds_02;
-                if (!dR.t().isEmpty() && dR.s()) {
-                    BasicValue ds_03 = (BasicValue) dR.t().get(dR.t().size() - 1);
-                    if (!dR.t().isEmpty()) {
+        for (BasicValue value : this.getValues()) {
+            if (!value.equals(this.getValues().get(this.getValues().size() - 1))) continue;
+            if (value instanceof DR) {
+                DR dR = (DR) value;
+                if (!dR.getValues().isEmpty() && dR.s()) {
+                    BasicValue ds_03 = (BasicValue) dR.getValues().get(dR.getValues().size() - 1);
+                    if (!dR.getValues().isEmpty()) {
                         return dR.r();
                     }
                     return ds_03;
                 }
-                return ds_02;
+                return value;
             }
-            return ds_02;
+            return value;
         }
         return null;
     }
@@ -60,7 +60,7 @@ public abstract class DR<K, C extends p1> extends BasicValue<K, C> {
         for (BasicValue ds_02 : ds_0Array) {
             ds_02.setBaseValue(this);
         }
-        this.m.addAll(Arrays.asList(ds_0Array));
+        this.values.addAll(Arrays.asList(ds_0Array));
         return this;
     }
 

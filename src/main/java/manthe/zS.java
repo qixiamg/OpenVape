@@ -143,7 +143,7 @@ extends Module {
 
     private boolean T() {
         if (this.x.u().booleanValue() && ds_2.I().d() && ds_2.I().g().equals(g4.f())) {
-            if (cb_0.f()) {
+            if (VapeSettings.f()) {
                 ei_0 ei_02 = ds_2.s().m();
                 ei_0.a(ei_02.i(), true);
             }
@@ -203,7 +203,7 @@ extends Module {
         for (Object e10 : arrayList2) {
             ej_0 ej_02;
             ex_0 ex_02 = new ex_0(e10);
-            if (cb_0.h && ex_02.a(A5.a8) || !ex_02.a(A5.cF) || !this.a(ej_02 = new ej_0(e10))) continue;
+            if (VapeSettings.h && ex_02.a(A5.a8) || !ex_02.a(A5.cF) || !this.a(ej_02 = new ej_0(e10))) continue;
             arrayList.add(ej_02);
         }
         if (arrayList.isEmpty()) {

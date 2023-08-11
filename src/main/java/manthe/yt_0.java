@@ -16,9 +16,7 @@ import com.google.gson.JsonElement;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import manthe.cb_0;
-import manthe.cy_0;
-import manthe.zu_0;
+
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 
@@ -81,11 +79,11 @@ public abstract class yt_0 {
             return false;
         }
         if (this.c().size() == 1) {
-            return cb_0.a(this.c().get(0));
+            return VapeSettings.a(this.c().get(0));
         }
         int n6 = 0;
         for (int n10 : this.c()) {
-            if (!cb_0.a(n10)) continue;
+            if (!VapeSettings.a(n10)) continue;
             ++n6;
         }
         return n6 == this.c().size();

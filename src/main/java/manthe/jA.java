@@ -3,15 +3,10 @@
  */
 package manthe;
 
-import manthe.A5;
-import manthe.BG;
-import manthe.cb_0;
-import manthe.gJ;
-
 public class jA
 extends gJ {
-    private final BG a = this.b(cb_0.h ? "lidAngle" : "field_145972_a", true, Float.TYPE);
-    private final BG d = this.b(cb_0.h ? "numPlayersUsing" : "field_145973_j", true, Integer.TYPE);
+    private final BG a = this.b(VapeSettings.h ? "lidAngle" : "field_145972_a", true, Float.TYPE);
+    private final BG d = this.b(VapeSettings.h ? "numPlayersUsing" : "field_145973_j", true, Integer.TYPE);
 
     public jA() {
         super(A5.dN);

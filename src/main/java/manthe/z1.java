@@ -63,13 +63,13 @@ extends Module {
 
     @Override
     public void a(kf_0 kf_02) {
-        if (V.c() >= 15 && this.M.u().booleanValue() && cb_0.f() && ds_2.x().e()) {
+        if (V.c() >= 15 && this.M.u().booleanValue() && VapeSettings.f() && ds_2.x().e()) {
             ds_2.b(0);
         }
         if (this.C.u().booleanValue() && ds_2.x().e() && ds_2.k().a8().m()) {
             gb_0 gb_02 = ds_2.I();
             if (gb_02.d() && gb_02.g().equals(g4.f())) {
-                if (cb_0.f()) {
+                if (VapeSettings.f()) {
                     ei_0 ei_02 = ds_2.s().m();
                     if (!ei_02.h()) {
                         uu_0.a(this.w);
@@ -83,7 +83,7 @@ extends Module {
                     this.J = true;
                     return;
                 }
-            } else if (cb_0.f()) {
+            } else if (VapeSettings.f()) {
                 ei_0 ei_03 = ds_2.s().m();
                 this.z = ei_03.h();
             }
@@ -99,8 +99,8 @@ extends Module {
     public void J() {
         ei_0 ei_02 = ds_2.s().m();
         ei_0 ei_03 = ds_2.s().s();
-        ei_0.a(ei_02.i(), cb_0.f());
-        if (cb_0.d()) {
+        ei_0.a(ei_02.i(), VapeSettings.f());
+        if (VapeSettings.d()) {
             uu_0.a(this.D);
         }
     }

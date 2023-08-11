@@ -8,9 +8,8 @@ import rip.vape.value.BasicValue;
 import java.util.HashMap;
 import java.util.Map;
 
-public class DX
-extends DR<pb_0, rz_0<pb_0>> {
-    private final Map<BasicValue, pb_0> o = new HashMap<BasicValue, pb_0>();
+public class DX extends DR<pb_0, rz_0<pb_0>> {
+    private final Map<BasicValue, pb_0> o = new HashMap<>();
     private pb_0[] p;
     private final String n;
 
@@ -70,7 +69,7 @@ extends DR<pb_0, rz_0<pb_0>> {
         ((rz_0)this.getDefaultValue()).a(pb_02);
     }
 
-    @Override
+
     public void a(int n6) {
         this.setType(this.u()[n6]);
     }
@@ -84,7 +83,7 @@ extends DR<pb_0, rz_0<pb_0>> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
         DX dX = this.v().e();
         if (dX == null) {
             return;
@@ -102,8 +101,8 @@ extends DR<pb_0, rz_0<pb_0>> {
     }
 
     @Override
-    public boolean b(BasicValue ds_02) {
-        return !this.o.containsKey(ds_02) || this.v().equals(this.o.get(ds_02));
+    public boolean b(BasicValue basicValue) {
+        return !this.o.containsKey(basicValue) || this.v().equals(this.o.get(basicValue));
     }
 
     public void a(BasicValue ds_02, pb_0 pb_02) {

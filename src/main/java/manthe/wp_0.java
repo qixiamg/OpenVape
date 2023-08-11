@@ -22,14 +22,14 @@ extends we_0 {
         this.W().e(false);
         this.W().b("wrap");
         this.a(new xM(this, "newsettings", "Settings").a(new H(this)));
-        cb_0 cb_02 = on.p.t();
+        VapeSettings cb_02 = on.p.t();
         yf_0 yf_02 = on.p.D();
         zu_0 zu_02 = zu_0.T;
         this.a((wM)new x2(wp_0.b.y), new Object[0]);
         this.a((wM)new xZ("MODULE SETTINGS"), new Object[0]);
-        this.a((wM)new wK(cb_02.u), new Object[0]);
-        this.a((wM)new wK(cb_02.t), new Object[0]);
-        this.a((wM)new wS(this, cb_02.K, cb_02), new Object[0]);
+        this.a((wM)new wK(cb_02.teamsByServer), new Object[0]);
+        this.a((wM)new wK(cb_02.teamsByColor), new Object[0]);
+        this.a((wM)new wS(this, cb_02.recolorVisuals, cb_02), new Object[0]);
         this.a((wM)new wO(this, cb_02.O, cb_02), new Object[0]);
         this.a((wM)new xj_0(this, ColorValue.createValue((Object)this, "Team Color", new Color(0, 190, 189)), cb_02), new Object[0]);
         this.a((wM)new wK(cb_02.y), new Object[0]);

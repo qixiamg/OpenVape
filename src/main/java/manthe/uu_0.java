@@ -7,14 +7,7 @@
 package manthe;
 
 import java.util.Random;
-import manthe.A5;
-import manthe.cb_0;
-import manthe.de_1;
-import manthe.ds_2;
-import manthe.dx_1;
-import manthe.dy_0;
-import manthe.u5;
-import manthe.z1;
+
 import org.lwjgl.input.Keyboard;
 
 /*
@@ -105,12 +98,12 @@ class uu_0 {
             return;
         }
         if (this.c == 1) {
-            if (!cb_0.d()) {
+            if (!VapeSettings.d()) {
                 this.f = true;
                 Thread.sleep(50L);
                 return;
             }
-        } else if (!cb_0.f()) {
+        } else if (!VapeSettings.f()) {
             this.f = true;
             return;
         }
@@ -128,7 +121,7 @@ class uu_0 {
         double d5 = ((double)(30 + this.n.nextInt(10)) + d4) / 100.0;
         long l10 = (long)((double)l6 * (1.0 - d5));
         long l11 = (long)((double)l6 * d5);
-        if (this.c == 1 ? !cb_0.d() : !cb_0.f()) {
+        if (this.c == 1 ? !VapeSettings.d() : !VapeSettings.f()) {
             return;
         }
         if (bl && (Keyboard.isKeyDown((int)42) || Keyboard.isKeyDown((int)54) && z1.i(this.o).size() > 0)) {
@@ -137,7 +130,7 @@ class uu_0 {
         }
         if (dx_12.e()) {
             this.d();
-            if (this.j && z1.m(this.o).u().booleanValue() && cb_0.d()) {
+            if (this.j && z1.m(this.o).u().booleanValue() && VapeSettings.d()) {
                 this.b();
             }
             Thread.sleep(l10);

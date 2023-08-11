@@ -19,10 +19,10 @@ import rip.vape.value.BasicValue;
 
 public class zR
 extends Module {
-    private final String x = cb_0.v + "r";
-    private final String z = cb_0.v + "e=";
-    private final String V = cb_0.v + "c-";
-    private final String ab = cb_0.v + "a+";
+    private final String x = VapeSettings.v + "r";
+    private final String z = VapeSettings.v + "e=";
+    private final String V = VapeSettings.v + "c-";
+    private final String ab = VapeSettings.v + "a+";
     private final Color O = new Color(20, 20, 20, 128);
     private final Color L = new Color(115, 0, 4, 128);
     private final BooleanValue K = BooleanValue.createValue((Object)this, "Ignore Invisibles", false, "Determines if we draw a nametag\nfor invisible entities");
@@ -34,7 +34,7 @@ extends Module {
     private final BooleanValue T = BooleanValue.createValue(this, "Equipment", false);
     private final BooleanValue G = BooleanValue.createValue(this, "Effects", false);
     private final DF D = DF.a(this, "Max Distance", "#", "m", 0.0, 0.0, 250.0, 1.0, "Maximum distance allowed to render.\nUse 0 to render at any distance.");
-    private final BooleanValue B = BooleanValue.createValue((Object)this, "Strength Indicator", false, "Gives you an indicator of your enemies\npossible damage relative to yours.\n    " + cb_0.v + "a+ " + this.x + "Enemy deals less damage than you\n    " + cb_0.v + "e= " + this.x + "Enemy deals equal damage to you\n    " + cb_0.v + "c- " + this.x + "Enemy deals more damage than you");
+    private final BooleanValue B = BooleanValue.createValue((Object)this, "Strength Indicator", false, "Gives you an indicator of your enemies\npossible damage relative to yours.\n    " + VapeSettings.v + "a+ " + this.x + "Enemy deals less damage than you\n    " + VapeSettings.v + "e= " + this.x + "Enemy deals equal damage to you\n    " + VapeSettings.v + "c- " + this.x + "Enemy deals more damage than you");
     private final BooleanValue U = BooleanValue.createValue((Object)this, "Calculate Effects", false, "Calculates potion effects to determine\ntotal possible damage. (Strength)");
     private final BooleanValue H = BooleanValue.createValue(this, "Render Animals", false);
     private final BooleanValue u = BooleanValue.createValue(this, "Health", false);
@@ -304,11 +304,11 @@ extends Module {
 
     private String a(eJ eJ2, ej_0 ej_02, boolean bl, boolean bl2, boolean bl3, boolean bl4) {
         String string = xp_0.a(ej_02);
-        String string2 = cb_0.v + "a" + cb_0.v + "r" + string;
+        String string2 = VapeSettings.v + "a" + VapeSettings.v + "r" + string;
         ds_2.M().a(1.0);
         boolean bl5 = ej_02.a(A5.cc);
         if (bl) {
-            string2 = cb_0.v + "a[" + cb_0.v + "f" + (int)eJ2.a(ej_02) + cb_0.v + "a]" + cb_0.v + "r " + string2;
+            string2 = VapeSettings.v + "a[" + VapeSettings.v + "f" + (int)eJ2.a(ej_02) + VapeSettings.v + "a]" + VapeSettings.v + "r " + string2;
         }
         if (bl5) {
             double d3;
@@ -333,16 +333,16 @@ extends Module {
                 }
             }
             if (ej_02.a(A5.cc) && ((eC)(object = new eC(ej_02))).a8().g()) {
-                string2 = cb_0.v + "a[C] " + cb_0.v + "r" + string2;
+                string2 = VapeSettings.v + "a[C] " + VapeSettings.v + "r" + string2;
             }
             String string4 = (d5 = 100.0 * ((d4 = (double)((f10 = ej_02.a(A5.cc) ? on.p.H().b(zt_0.class).b(new eC(ej_02.a())) : ej_02.aD()) / 2.0f)) / (d3 = (double)(ej_02.at() / 2.0f)))) > 75.0 ? "2" : (d5 > 50.0 ? "e" : (d5 > 25.0 ? "6" : "4"));
             String string5 = this.N.b(Math.floor((d4 + 0.25) / 0.5) * 0.5);
             if (bl2) {
-                string2 = String.format("%s %s%s%s", string2, cb_0.v, string4, string5);
+                string2 = String.format("%s %s%s%s", string2, VapeSettings.v, string4, string5);
             }
             if (bl4 && ej_02.aR() > 0.0f) {
                 String string6 = this.N.b(Math.floor(((double)ej_02.aR() + 0.25) / 0.5) * 0.5);
-                string2 = String.format("%s %s%s%s", string2, cb_0.v, "6", string6);
+                string2 = String.format("%s %s%s%s", string2, VapeSettings.v, "6", string6);
             }
             if (bl3) {
                 string2 = String.format("%s %s", string2, this.a(eJ2, ej_02));

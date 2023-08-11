@@ -69,14 +69,14 @@ implements o1 {
             Object c2;
             BasicValue ds_02;
             BooleanValue dB = (BooleanValue)this.p();
-            if (dB.t().size() == 0) {
+            if (dB.getValues().size() == 0) {
                 this.G.a(false);
             }
             GL11.glEnable((int)3042);
             GL11.glDisable((int)3553);
             GL11.glBlendFunc((int)770, (int)771);
             this.G.e(dB.y());
-            if (dB.y() && !dB.t().isEmpty() && (ds_02 = dB.r()) != null && (c2 = dB.r().getDefaultValue()) != null) {
+            if (dB.y() && !dB.getValues().isEmpty() && (ds_02 = dB.r()) != null && (c2 = dB.r().getDefaultValue()) != null) {
                 GL11.glColor4d((double)0.25, (double)0.25, (double)0.25, (double)0.2);
                 GL11.glBegin((int)7);
                 GL11.glVertex2d((double)(this.t() - 1.0), (double)(c2.k() + c2.b()));

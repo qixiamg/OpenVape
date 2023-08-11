@@ -90,7 +90,7 @@ public class dy_0 extends BasicValue<Double[], sk_0> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
     }
 
     @Override

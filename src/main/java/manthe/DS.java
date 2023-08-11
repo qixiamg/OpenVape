@@ -3,12 +3,6 @@
  */
 package manthe;
 
-import manthe.ak_0;
-import manthe.on;
-import manthe.rl_0;
-import manthe.sg_0;
-import manthe.vK;
-
 class DS
 implements vK {
     final ak_0 b;
@@ -27,7 +21,7 @@ implements vK {
             return;
         }
         if (!this.b.o()) {
-            on.p.t().s.a().a(0, 0, 0);
+            on.p.t().syncSettingsState.a().a(0, 0, 0);
             try {
                 Thread.sleep(200L);
             }

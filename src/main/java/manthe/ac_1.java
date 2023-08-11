@@ -6,22 +6,8 @@
  */
 package manthe;
 
-import a.a;
 import java.awt.Color;
-import manthe.V;
-import manthe.Y;
-import manthe.cb_0;
-import manthe.dr_1;
-import manthe.ds_2;
-import manthe.eJ;
-import manthe.ef_0;
-import manthe.ex_0;
-import manthe.mA;
-import manthe.o7;
-import manthe.on;
-import manthe.qN;
-import manthe.tV;
-import manthe.tW;
+
 import org.lwjgl.opengl.GL11;
 
 /*
@@ -55,7 +41,7 @@ public class ac_1 {
         }
         GL11.glRotated((double)(-d11), (double)0.0, (double)1.0, (double)0.0);
         double d14 = d7 - eJ2.l() + d10 / 2.0 + 0.2;
-        if (cb_0.h) {
+        if (VapeSettings.h) {
             d14 = d7 - 0.3 - eJ2.l();
         }
         double d15 = d8 - eJ2.g();

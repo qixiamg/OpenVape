@@ -118,7 +118,7 @@ extends Module {
             boolean bl;
             int n6 = ds_2.s().s().i();
             ds_2.k().aU().a(this.M);
-            boolean bl2 = bl = ds_2.k().bd() && cb_0.a(n6);
+            boolean bl2 = bl = ds_2.k().bd() && VapeSettings.a(n6);
             if (bl) {
                 ei_0.a(n6, false);
                 ei_0.a(n6);
@@ -131,7 +131,7 @@ extends Module {
             long l6 = Math.max((long)this.I.t() + (long)(bl ? -35 : 0), 0L);
             Thread.sleep(l6);
             ds_2.k().aU().a(this.u);
-            if (cb_0.a(n6)) {
+            if (VapeSettings.a(n6)) {
                 ei_0.a(n6, true);
                 ei_0.a(n6);
             }

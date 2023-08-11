@@ -62,7 +62,7 @@ extends Module {
 
     public boolean a(ex_0 ex_02) {
         if (this.u.v() == this.C) {
-            if (!cb_0.h) {
+            if (!VapeSettings.h) {
                 return false;
             }
             if (ex_02.a(A5.u)) {
@@ -96,7 +96,7 @@ extends Module {
             eC eC3 = new eC(ex_02);
             eJ eJ2 = ds_2.k();
             boolean bl = false;
-            if (cb_0.h) {
+            if (VapeSettings.h) {
                 bl = eC3.aD() >= 0.0f;
             }
             return bl || eC3.l() > eJ2.l() + 3.0 && eJ2.a(eC3) < 10.0f && this.B.getOrDefault(eC3.q(), -1) < 20;
@@ -231,7 +231,7 @@ extends Module {
                 for (Object e10 : gO3.j()) {
                     eC eC3 = new eC(e10);
                     if (eC3.a(A5.u)) continue;
-                    if (cb_0.h) {
+                    if (VapeSettings.h) {
                         if (Float.isNaN(eC3.aD()) || !(eC3.l() > eJ2.l()) || !(eJ2.a(eC3) < 10.0f)) continue;
                         gO3.a(eC3);
                         break;
@@ -249,7 +249,7 @@ extends Module {
                         this.B.put(eC3.q(), this.B.getOrDefault(eC3.q(), -1) - 1);
                     }
                     String string = eC3.h().f();
-                    if (!(eC3.l() > eJ2.l() + 3.0 && string.endsWith(eC3.S() + cb_0.v + "r") && eJ2.a(eC3) < 7.0f && this.B.getOrDefault(eC3.q(), -1) < 60) && !eC3.ae()) continue;
+                    if (!(eC3.l() > eJ2.l() + 3.0 && string.endsWith(eC3.S() + VapeSettings.v + "r") && eJ2.a(eC3) < 7.0f && this.B.getOrDefault(eC3.q(), -1) < 60) && !eC3.ae()) continue;
                     if (!this.z.u().booleanValue()) break;
                     gO3.a(eC3);
                     break;

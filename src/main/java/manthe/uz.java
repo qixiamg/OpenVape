@@ -5,9 +5,9 @@ package manthe;
 
 class uz
 implements R {
-    final cb_0 a;
+    final VapeSettings a;
 
-    uz(cb_0 cb_02) {
+    uz(VapeSettings cb_02) {
         this.a = cb_02;
     }
 

@@ -25,7 +25,7 @@ extends yc_0 {
             if (ds_2.t().e()) {
                 return;
             }
-            if (this.v.E.u().booleanValue() && !cb_0.f()) {
+            if (this.v.E.u().booleanValue() && !VapeSettings.f()) {
                 this.v.R.clear();
                 return;
             }

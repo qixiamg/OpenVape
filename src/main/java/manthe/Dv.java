@@ -34,7 +34,7 @@ extends BasicValue<List<U>, rF> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
     }
 
     @Override

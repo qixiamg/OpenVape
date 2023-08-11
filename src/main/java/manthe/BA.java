@@ -4,9 +4,6 @@
 package manthe;
 
 import java.util.Comparator;
-import manthe.cb_0;
-import manthe.fQ;
-import manthe.zY;
 
 class BA
 implements Comparator<fQ> {
@@ -17,7 +14,7 @@ implements Comparator<fQ> {
     }
 
     public int a(fQ fQ2, fQ fQ3) {
-        return Double.compare(cb_0.a(fQ2.f()), cb_0.a(fQ3.f()));
+        return Double.compare(VapeSettings.a(fQ2.f()), VapeSettings.a(fQ3.f()));
     }
 }
 

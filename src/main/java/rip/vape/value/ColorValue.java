@@ -85,6 +85,7 @@ public class ColorValue extends BasicValue<Double, sW> {
         ((sW)this.getDefaultValue()).f(fArray[0] * 96.0f);
         this.o.b((double)fArray[1] * 96.0);
         this.q.b((double)fArray[2] * 96.0);
+        return 0;
     }
 
     @Override
@@ -112,7 +113,7 @@ public class ColorValue extends BasicValue<Double, sW> {
     }
 
     @Override
-    public void getRuntimeCopyException(String string) {
+    public void setTypeByString(String string) {
         this.setType(Double.parseDouble(string));
     }
 

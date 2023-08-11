@@ -12,15 +12,16 @@ implements R {
     public void a(p1 p12) {
         if (p12.p() != null && p12.p() instanceof DR) {
             DR dR = (DR)p12.p();
-            for (BasicValue ds_02 : dR.t()) {
-                BasicValue ds_03 = ds_02;
-                Object c2 = ds_03.getDefaultValue();
-                if (c2 == null) continue;
-                if (!p12.e()) {
-                    c2.a(false);
-                    continue;
+            for (Object value : dR.getValues()) {
+                if (value instanceof BasicValue) {
+                    Object c2 = ((BasicValue<?, ?>) value).getDefaultValue();
+                    if (c2 == null) continue;
+                    if (!p12.e()) {
+                        c2.a(false);
+                        continue;
+                    }
+                    ((BasicValue<?, ?>) value).getDefaultValue().a(dR.b(value));
                 }
-                ds_03.getDefaultValue().a(dR.b(ds_03));
             }
         }
     }

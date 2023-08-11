@@ -6,19 +6,6 @@ package manthe;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
-import manthe.A5;
-import manthe.AO;
-import manthe.cb_0;
-import manthe.ds_2;
-import manthe.dx_2;
-import manthe.eD;
-import manthe.eJ;
-import manthe.ei_0;
-import manthe.fG;
-import manthe.gS;
-import manthe.kt_0;
-import manthe.oA;
-import manthe.y8;
 
 /*
  * Renamed from manthe.ym
@@ -97,7 +84,7 @@ extends y8 {
         int n6 = (int)eJ2.z();
         int n10 = (int)eJ2.l();
         int n11 = (int)eJ2.g();
-        if (!cb_0.h) {
+        if (!VapeSettings.h) {
             --n10;
             --n11;
         }
