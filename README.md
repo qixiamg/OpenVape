@@ -21,7 +21,7 @@ This source is not buildable now. We are working for it.
 
 ## Why open source
 
-Manthe's Chinese auth server is ch**k2.vape.gg, ch**k is same as ni**er, and thr forum is ch**k.vape.gg
+Manthe's Chinese auth server is `ch**k2.vape.gg`, `ch**k` is same as `ni**er`, and thr forum is `ch**k.vape.gg`
 
 And Manthe says, "Taiwan is a ***** country."
 
